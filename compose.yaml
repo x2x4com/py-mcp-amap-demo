@@ -1,0 +1,13 @@
+services:
+  mcp-server:
+    container_name: mcp-server
+    build: .
+    ports:
+      - "3001:3001"
+    networks:
+      - network1
+
+networks:
+  network1:
+    name: nsq-network
+    external: true
